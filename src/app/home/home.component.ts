@@ -22,10 +22,10 @@ export class HomeComponent implements OnInit {
   constructor(private coursesService: CoursesService) {}
 
   ngOnInit() {
-    this.getCourses();
+    this.reloadCourses();
   }
 
-  getCourses() {
+  reloadCourses() {
     this.courses$ = this.coursesService.loadAllCourses();
 
     // Set Beginner Courses
